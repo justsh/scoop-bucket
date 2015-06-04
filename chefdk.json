@@ -1,0 +1,42 @@
+{
+    "version": "0.6.0",
+    "license": "https://github.com/chef/chef-dk/blob/master/LICENSE",
+    "url": "https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chefdk-0.6.0-1.msi",
+    "hash": "sha1:136c35cdaf2bcddd97590ac99ff56e733a0fd84b",
+    "homepage": "https://chef.io",
+    "extract_dir": "opscode\\chefdk",
+    "bin":
+      [
+        ["bin\\berks.bat", "berks"],
+        ["bin\\chef-apply.bat", "chef-apply"],
+        ["bin\\chef-client.bat", "chef-client"],
+        ["bin\\chef-service-manager.bat", "chef-service-manager"],
+        ["bin\\chef-shell.bat", "chef-shell"],
+        ["bin\\chef-solo.bat", "chef-solo"],
+        ["bin\\chef-vault.bat", "chef-vault"],
+        ["bin\\chef-windows-service.bat", "chef-windows-service"],
+        ["bin\\chef.bat", "chef"],
+        ["bin\\fauxhai.bat", "fauxhai"],
+        ["bin\\foodcritic.bat", "foodcritic"],
+        ["bin\\kitchen.bat", "kitchen"],
+        ["bin\\knife.bat", "knife"],
+        ["bin\\ohai.bat", "ohai"],
+        ["bin\\rubocop.bat", "rubocop"]
+    ],
+    "notes": [
+      "Chef Development Kit includes:",
+      "  Chef Client",
+      "  Chef Zero",
+      "  Berkshelf",
+      "  TestKitchen",
+      "  ChefSpec",
+      "  Foodcritic",
+      "  chef",
+      "  ohai",
+      "  knife"
+    ],
+    "checkver": {
+        "url": "https://downloads.chef.io/chef-dk/windows",
+        "re": "<span ng-bind-template=\"Version [0-9\\.]+\" class=\"ng-binding\">Version ([0-9\\.]+)</span>"
+    }
+}
