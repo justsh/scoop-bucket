@@ -1,0 +1,22 @@
+{
+    "version": "0.5.1",
+    "homepage": "https://git-lfs.github.com/",
+    "license": "https://github.com/github/git-lfs/blob/master/LICENSE",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/github/git-lfs/releases/download/v0.5.1/git-lfs-windows-386-0.5.1.zip",
+            "hash": "d40b55a6de2374e14276ca8e70c864cf4c673657b64c72cb4b95a87f19d41402"
+        },
+        "64bit": {
+            "url": "https://github.com/github/git-lfs/releases/download/v0.5.1/git-lfs-windows-amd64-0.5.1.zip",
+            "hash": "c092876045b5993de7ccf038d28088251bad80e28f362b0478feeef3dcedc1c9"
+        }
+    },
+    "bin": "git-lfs.exe",
+    "depends": "git",
+    "notes": [
+        "Git LFS is an open source git extension.",
+        "It requires an lfs-server instance, which is not provided by this install"
+    ],
+    "post_install": "git lfs init"
+}
