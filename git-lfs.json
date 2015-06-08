@@ -1,6 +1,6 @@
 {
     "version": "0.5.1",
-    "homepage": "https://git-lfs.github.com/",
+    "homepage": "https://git-lfs.github.com",
     "license": "https://github.com/github/git-lfs/blob/master/LICENSE",
     "architecture": {
         "32bit": {
@@ -18,5 +18,8 @@
         "Git LFS is an open source git extension.",
         "It requires an lfs-server instance, which is not provided by this install"
     ],
-    "post_install": "git lfs init"
+    "post_install": "git lfs init",
+    "checkver": {
+        "re" : "<.*=\"download-details\">v([0-9\\.]+)"
+    }
 }

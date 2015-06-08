@@ -36,7 +36,7 @@
       "  knife"
     ],
     "checkver": {
-        "url": "https://downloads.chef.io/chef-dk/windows",
-        "re": "<span ng-bind-template=\"Version [0-9\\.]+\" class=\"ng-binding\">Version ([0-9\\.]+)</span>"
+        "url": "https://downloads.chef.io/index.html?",
+        "re": "<.*>Chef Development Kit<.*>\\s+<p class=\"version\">\\s+Version\\s*([0-9\\.]+)\\s+</p>"
     }
 }
