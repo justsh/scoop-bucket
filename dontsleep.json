@@ -1,0 +1,14 @@
+﻿{
+    "version":  "3.72",
+    "license":  "http://www.softwareok.com/?seite=Microsoft/DontSleep/Eula",
+    "extract_dir":  "",
+    "architecture": {
+        "64bit": {
+            "url":  "http://www.softwareok.com/Download/DontSleep_x64.zip"
+        }
+    },
+    "homepage":  "http://www.softwareok.com/?seite=Microsoft/DontSleep",
+    "bin":  [
+        ["DontSleep_x64.exe", "dontsleep"]
+    ]
+}
