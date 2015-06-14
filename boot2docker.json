@@ -1,0 +1,43 @@
+﻿{
+    "version":  "1.6.2",
+    "license":  "https://github.com/boot2docker/windows-installer/blob/master/LICENSE",
+    "extract_dir":  "",
+    "url":  "https://github.com/boot2docker/windows-installer/releases/download/v1.6.2/docker-install.exe",
+    "innosetup": true,
+    "depends":  ["git", "openssh"],
+    "homepage":  "http://docs.docker.com/installation/windows/",
+    "hash":  "",
+    "bin":  [
+        "boot2docker.exe",
+        "docker.exe"
+    ],
+    "notes": [
+        "NOT portable just yet:",
+        "The boot2docker profile appears to be hardcoded to $HOME/.boot2docker",
+        "and will contain certs and the boot2docker.iso",
+        "",
+        "Uses scoop git and openssh dependencies instead of packaged msysgit",
+        "",
+        "Run `boot2docker shellinit | Invoke-Expression` in Powershell to",
+        "source the shell environment"
+    ],
+    "post_install": "
+        # see $dir/start.sh
+
+        echo \"\"
+        echo \"Copying boot2docker.iso to default location\"
+        $ISO = \"$HOME/.boot2docker/boot2docker.iso\"
+
+        If (-not (Test-Path $ISO)) {
+            New-Item -Force -ItemType directory -Path (Split-Path $ISO)
+            Copy-Item \"$dir/boot2docker.iso\" $ISO
+        }
+
+
+        echo \"Starting boot2docker test run\"
+        boot2docker init
+        boot2docker start
+        boot2docker ip
+        boot2docker down
+    "
+}

@@ -1,0 +1,23 @@
+﻿{
+    "version":  "2.14",
+    "license":  "http://beyondgrep.com/documentation/ack-2.14-man.html#copyright___license",
+    "url":  "http://beyondgrep.com/ack-2.14-single-file",
+    "depends":  ["perl"],
+    "homepage":  "http://beyondgrep.com/",
+    "bin":  [
+        ["ack-2.14-single-file", "ack"]
+    ],
+    "notes": [
+        "Windows does not have file associations for perl (and the",
+        "ack-single-file doesn't have an extension anyway) so as a workaround",
+        "to typing \"perl ack\" every time, perl is injected into the ack.ps1 shim",
+        "",
+        "See the post_install in ack.json"
+    ],
+    "post_install": "
+        $ack_shim = \"$env:SCOOP/shims/ack.ps1\"
+
+        (Get-Content $ack_shim).replace(\"& `$path\",\"& perl `$path\") |
+            Out-File $ack_shim
+    "
+}
