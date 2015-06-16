@@ -1,0 +1,28 @@
+﻿{
+    "version":  "1.9.5",
+    "license":  "https://raw.githubusercontent.com/git/git/master/COPYING",
+    "url":  "https://raw.githubusercontent.com/git/git/v1.9.5/git-p4.py",
+    "depends":  [
+        "git",
+        "python27"
+    ],
+    "homepage":  "http://git-scm.com/docs/git-p4",
+    "bin":  "git-p4.py",
+    "post_install": "
+        $git_core = \"$(Split-Path (Split-Path (scoop which git)))/libexec/git-core\"
+        $git_p4 = \"$git_core/git-p4\"
+
+        If (Test-Path $git_p4) {
+            $git_p4_bak = \"${git_core}/.git-p4.bak\"
+
+            If (Test-Path $git_p4_bak) {
+                Remove-Item $git_p4
+            }
+            Else {
+                Move-Item $git_p4 $git_p4_bak
+            }
+        }
+
+        New-Symlink \"$git_p4\" \"$dir/git-p4.py\" | Out-Null
+    "
+}
