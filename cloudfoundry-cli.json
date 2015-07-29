@@ -1,0 +1,9 @@
+﻿{
+    "version":  "6.12.2",
+    "license":  "https://raw.githubusercontent.com/cloudfoundry/cli/master/LICENSE",
+    "url":  "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v6.12.2/cf-windows-amd64.zip",
+    "depends":  "",
+    "homepage":  "https://github.com/cloudfoundry/cli",
+    "hash":  "",
+    "bin":  "cf.exe"
+}
