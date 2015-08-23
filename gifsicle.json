@@ -1,0 +1,19 @@
+﻿{
+    "version":  "1.87",
+    "license":  "https://github.com/kohler/gifsicle/blob/master/README.md#copyrightlicense",
+    "architecture": {
+        "32bit": {
+            "url": "https://eternallybored.org/misc/gifsicle/gifsicle-1.87-win32.zip"
+        },
+        "64bit": {
+            "url": "https://eternallybored.org/misc/gifsicle/gifsicle-1.87-win64.zip"
+        }
+    },
+    "extract_dir": "gifsicle-1.87",
+    "homepage":  "http://www.lcdf.org/gifsicle/",
+    "hash":  "",
+    "bin":  [
+        "gifsicle.exe",
+        "gifdiff.exe"
+    ]
+}
