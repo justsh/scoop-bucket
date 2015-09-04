@@ -1,0 +1,32 @@
+﻿{
+    "version":  "2014.3_1007540",
+    "license":  "",
+    "architecture": {
+      "32bit": {
+        "url":  "http://www.perforce.com/downloads/perforce/r14.3/bin.ntx86/p4vinst.exe",
+        "installer": {
+          "args": "/a /v\"/qb TARGETDIR=$dir\""
+        }
+      },
+      "64bit": {
+        "url":  "http://www.perforce.com/downloads/perforce/r14.3/bin.ntx64/p4vinst64.exe",
+        "installer": {
+          "args": "/S /v/qn /a /V\" /qb TARGETDIR=\\\"$dir\\\""
+        }
+      }
+    },
+    "homepage":  "http://www.perforce.com",
+    "bin":  [
+      "Perforce/Perforce/p4.exe",
+      "Perforce/Perforce/p4admin.exe",
+      "Perforce/Perforce/p4merge.exe",
+      "Perforce/Perforce/p4v.exe",
+      "Perforce/Perforce/p4vc.exe"
+    ],
+    "notes": [
+      "Not yet working completely, requires manual shim",
+      "The InstallShield MSI (p4vinst*.exe) will extract properly,",
+      "but since it launches an additional process to extract the msi",
+      "itself, scoop will exit too early and fail to create shims"
+    ]
+}
