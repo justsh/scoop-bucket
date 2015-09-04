@@ -1,15 +1,15 @@
 {
-    "version": "0.5.1",
+    "version": "0.5.4",
     "homepage": "https://git-lfs.github.com",
-    "license": "https://github.com/github/git-lfs/blob/master/LICENSE",
+    "license": "https://raw.githubusercontent.com/github/git-lfs/master/LICENSE.md",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/github/git-lfs/releases/download/v0.5.1/git-lfs-windows-386-0.5.1.zip",
-            "hash": "d40b55a6de2374e14276ca8e70c864cf4c673657b64c72cb4b95a87f19d41402"
+            "url": "https://github.com/github/git-lfs/releases/download/v0.5.4/git-lfs-windows-386-0.5.4.zip",
+            "hash": "15f2f7bd90fb6fb8e1dae81ddf730248880d9db4f12c0f955d2a995a3f73d0e9"
         },
         "64bit": {
-            "url": "https://github.com/github/git-lfs/releases/download/v0.5.1/git-lfs-windows-amd64-0.5.1.zip",
-            "hash": "c092876045b5993de7ccf038d28088251bad80e28f362b0478feeef3dcedc1c9"
+            "url": "https://github.com/github/git-lfs/releases/download/v0.5.4/git-lfs-windows-amd64-0.5.4.zip",
+            "hash": "96a408f3f5da0abfd482aa51dc41009095b96d0025792ad946cf5b18984ce487"
         }
     },
     "bin": "git-lfs.exe",
