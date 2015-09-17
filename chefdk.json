@@ -1,13 +1,14 @@
 {
-    "version": "0.6.0",
-    "license": "https://github.com/chef/chef-dk/blob/master/LICENSE",
-    "url": "https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chefdk-0.6.0-1.msi",
-    "hash": "sha1:136c35cdaf2bcddd97590ac99ff56e733a0fd84b",
+    "version": "0.7.0",
+    "license": "https://raw.githubusercontent.com/chef/chef-dk/master/LICENSE",
+    "url": "https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chefdk-0.7.0-1.msi",
+    "hash": "sha1:5d206cfeafdc900ad69abfc1af16a43dc7b46be8",
     "homepage": "https://chef.io",
     "extract_dir": "opscode\\chefdk",
     "bin":
       [
         ["bin\\berks.bat", "berks"],
+        ["bin\\chef.bat", "chef"],
         ["bin\\chef-apply.bat", "chef-apply"],
         ["bin\\chef-client.bat", "chef-client"],
         ["bin\\chef-service-manager.bat", "chef-service-manager"],
@@ -15,7 +16,6 @@
         ["bin\\chef-solo.bat", "chef-solo"],
         ["bin\\chef-vault.bat", "chef-vault"],
         ["bin\\chef-windows-service.bat", "chef-windows-service"],
-        ["bin\\chef.bat", "chef"],
         ["bin\\fauxhai.bat", "fauxhai"],
         ["bin\\foodcritic.bat", "foodcritic"],
         ["bin\\kitchen.bat", "kitchen"],
