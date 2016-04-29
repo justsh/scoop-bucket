@@ -1,0 +1,23 @@
+{
+    "version": "930",
+    "license": "http://www.rapidee.com/en/license",
+    "architecture": {
+        "32bit": {
+            "url": "http://www.rapidee.com/download/RapidEE.zip",
+            "hash": ""
+        },
+        "64bit": {
+            "url": "http://www.rapidee.com/download/RapidEEx64.zip",
+            "hash": "25eb6c62d0d931478dadc6de5c21a49c7d5dcb343d22819a65fa61abc614ce40"
+        }
+    },
+    "homepage": "http://www.rapidee.com/",
+    "bin": "rapidee.exe",
+    "notes": [
+      "Installs builds of RapidEE version 9.0"
+    ],
+    "checkver": {
+        "url": "http://www.rapidee.com/en/history",
+        "re": "<div id=\"latest\">\\s*<h2>9.0 build ([0-9]+)"
+    }
+}
