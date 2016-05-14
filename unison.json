@@ -1,0 +1,19 @@
+﻿{
+    "version":  "2.48.3",
+    "license":  "GPL",
+    "url":  "https://www.irif.univ-paris-diderot.fr/~vouillon//unison/unison%202.48.3%20-%20OCaml%204.02.1.zip",
+    "depends":  "",
+    "homepage":  "https://www.cis.upenn.edu/~bcpierce/unison/",
+    "hash":  "7eb73d4a1e992aac6746148aeec25c3454b49722be4fa799f8745cbffc3d3e07",
+    "env_add_path": [ "." ],
+    "bin": [
+        ["unison 2.48.3 text.exe", "unison"],
+        ["unison 2.48.3 GTK.exe", "unison-gtk"],
+        ["unison-fsmonitor.exe", "unison-fsmonitor"]
+    ],
+    "notes": [
+        "Binaries: http://unison-binaries.inria.fr/",
+        "Windows binaries: https://www.irif.univ-paris-diderot.fr/~vouillon//unison/",
+        "GTK Runtime: https://sourceforge.net/projects/gtk-win/"
+    ]
+}
