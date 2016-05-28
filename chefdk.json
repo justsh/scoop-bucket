@@ -1,12 +1,22 @@
 {
-    "version": "0.7.0",
-    "license": "https://raw.githubusercontent.com/chef/chef-dk/master/LICENSE",
-    "url": "https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chefdk-0.7.0-1.msi",
-    "hash": "sha1:5d206cfeafdc900ad69abfc1af16a43dc7b46be8",
+    "version": "0.14.25",
+    "license": "https://downloads.chef.io/chef-dk/0.14.25/windows/7-8-8.1-10-Server-2008-R2-2012-2012-R2/license.html",
+    "url": "https://packages.chef.io/stable/windows/2008r2/chefdk-0.14.25-1-x86.msi",
+    "hash": "b2ce916f6c30909e16d7df444d6812bd84fc44cf8868d4f2b9e1c5fed5878f50",
     "homepage": "https://chef.io",
-    "extract_dir": "opscode\\chefdk",
+    "extract_dir": "opscode",
+    "pre_install": "
+        Write-Host \"Extracting chefdk to $dir\"
+        7z x -aos -o\"$dir\" \"$dir\\chefdk.zip\"
+        Write-Host \"Cleaning up...\"
+        Remove-Item -Path \"$dir\\chefdk.zip\"
+        Remove-Item -Path \"$dir\\.bundle\" -Recurse
+        Move-Item -Path \"$dir\\chefdk\\bin\\start-chefdk.ps1\" \"$dir\\bin\" -Force
+        Remove-Item -Path \"$dir\\chefdk\" -Recurse
+        Get-ChildItem -Path \"$dir\" -Recurse -Include '.gitkeep' | Remove-Item -Force
+    ",
     "bin":
-      [
+    [
         ["bin\\berks.bat", "berks"],
         ["bin\\chef.bat", "chef"],
         ["bin\\chef-apply.bat", "chef-apply"],
@@ -16,24 +26,26 @@
         ["bin\\chef-solo.bat", "chef-solo"],
         ["bin\\chef-vault.bat", "chef-vault"],
         ["bin\\chef-windows-service.bat", "chef-windows-service"],
-        ["bin\\fauxhai.bat", "fauxhai"],
+        ["bin\\cookstyle.bat", "cookstyle"],
         ["bin\\foodcritic.bat", "foodcritic"],
         ["bin\\kitchen.bat", "kitchen"],
         ["bin\\knife.bat", "knife"],
         ["bin\\ohai.bat", "ohai"],
-        ["bin\\rubocop.bat", "rubocop"]
+        ["bin\\pushy-client.bat", "pushy-client"],
+        ["bin\\pushy-service-manager.bat", "pushy-service-manager"],
+        ["bin\\start-chefdk.ps1", "start-chefdk"]
     ],
     "notes": [
       "Chef Development Kit includes:",
-      "  Chef Client",
-      "  Chef Zero",
-      "  Berkshelf",
-      "  TestKitchen",
-      "  ChefSpec",
-      "  Foodcritic",
-      "  chef",
-      "  ohai",
-      "  knife"
+      "- Chef Client",
+      "- Chef Zero",
+      "- Berkshelf",
+      "- TestKitchen",
+      "- ChefSpec",
+      "- Foodcritic",
+      "- chef",
+      "- ohai",
+      "- knife"
     ],
     "checkver": {
         "url": "https://downloads.chef.io/index.html?",
