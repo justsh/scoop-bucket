@@ -37,6 +37,6 @@
     ],
     "checkver": {
         "url": "https://downloads.chef.io/index.html?",
-        "re": "<.*>Chef Development Kit<.*>\\s+<p class=\"version\">\\s+Version\\s*([0-9\\.]+)\\s+</p>"
+        "re": "<h2><a href=\"/chef-dk\">Chef Development Kit</a></h2>\\s+<p class=\"version\">\\s+Version ([0-9]+[.][0-9]+[.][0-9]+)\\s+</p>"
     }
 }
